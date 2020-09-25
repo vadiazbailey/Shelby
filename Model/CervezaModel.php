@@ -38,7 +38,8 @@ class CervezaModel{
       $color){
         $sentencia = $this->db->prepare('UPDATE cerveza SET estilo=?, volumen=?, 
         graduacion_alcoholica=?, precio=?, cantidad=?, id_color=?  WHERE id_cerveza=?');
-        $sentencia->execute(array($estilo, $volumen, $graduacion_alcoholica, $precio,));
+        $sentencia->execute(array($estilo, $volumen, $graduacion_alcoholica, $precio,
+                            $cantidad, $color));
       }
     }
 ?>
