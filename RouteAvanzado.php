@@ -1,5 +1,6 @@
 <?php
     require_once 'RouterClass.php';
+    require_once './Controller/cont.php';
     
     // CONSTANTES PARA RUTEO
     define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
@@ -9,7 +10,7 @@
     // rutas
     $r->addRoute("home", "GET", "TasksController", "Home");
     $r->addRoute("mermelada", "GET", "TasksController", "Home");
-
+    $r->addRoute("showCerveza", "GET", "cont", "showCerveza");
     //Esto lo veo en TasksView
     $r->addRoute("insert", "POST", "TasksController", "InsertTask");
 

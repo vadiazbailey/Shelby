@@ -3,7 +3,7 @@
 //Llama a la libreria de Smarty
 require_once './libs/Smarty.class.php';
 
-class AlumnosView{
+class CervezasView{
     //Variables
     private $smarty;
 
@@ -21,4 +21,10 @@ class AlumnosView{
         $this ->smarty-> display('templates/listadoBeers.tpl');
     }
     
+    function showBeer($beer){
+        $this->smarty->assign('cervezas', $beer); 
+        $this->smarty->display('table.tpl'); 
+    }
+
+
 }
